@@ -1,1 +1,255 @@
 
+/* ==========================
+   The Six Appliance Repair
+   Main Stylesheet
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    color:#222;
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    background:#0B3C5D;
+    padding:18px 0;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo img{
+    height:70px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav li{
+    margin-left:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#F39C12;
+}
+
+/* HERO */
+
+.hero{
+    height:90vh;
+    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("images/hero.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:58px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:24px;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    margin:10px;
+}
+
+.call-btn{
+    background:#F39C12;
+    color:white;
+}
+
+.whatsapp-btn{
+    background:#25D366;
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* SERVICES */
+
+.services{
+    padding:80px 0;
+}
+
+.services h2{
+    text-align:center;
+    margin-bottom:50px;
+    color:#0B3C5D;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card i{
+    font-size:50px;
+    color:#F39C12;
+    margin-bottom:20px;
+}
+
+/* WHY */
+
+.why{
+    background:#F5F5F5;
+    padding:80px 0;
+    text-align:center;
+}
+
+.why h2{
+    color:#0B3C5D;
+    margin-bottom:30px;
+}
+
+.why ul{
+    list-style:none;
+}
+
+.why li{
+    font-size:22px;
+    margin:15px 0;
+}
+
+/* AREAS */
+
+.areas{
+    padding:80px 0;
+    text-align:center;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#0B3C5D;
+    color:white;
+    padding:80px 0;
+    text-align:center;
+}
+
+.contact h2{
+    margin-bottom:25px;
+}
+
+/* FLOATING WHATSAPP */
+
+.whatsapp-float{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    font-size:32px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.whatsapp-float:hover{
+
+    transform:scale(1.1);
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+}
