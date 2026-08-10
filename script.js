@@ -64,3 +64,32 @@ document.addEventListener("DOMContentLoaded", () => {
         passive: true
     });
 });
+/* =========================
+   MOBILE MENU
+========================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const mobileMenu = document.getElementById("mainMenu");
+    const navLinks = document.querySelectorAll("#mainMenu .nav-link");
+
+    if (!mobileMenu) return;
+
+    navLinks.forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+            if (window.innerWidth < 992) {
+
+                const collapse =
+                    bootstrap.Collapse.getOrCreateInstance(mobileMenu);
+
+                collapse.hide();
+
+            }
+
+        });
+
+    });
+
+});
