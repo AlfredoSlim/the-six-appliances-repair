@@ -5,7 +5,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.querySelector(".premium-navbar");
-
+const navbarLogo = document.querySelector(".navbar-logo");
     const animatedElements = document.querySelectorAll(`
         .section-heading,
         .premium-service-card,
@@ -46,24 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
     animatedElements.forEach((element) => {
         revealObserver.observe(element);
     });
-
-    const updateNavbar = () => {
-        if (!navbar) {
-            return;
-        }
-
-        navbar.classList.toggle(
-            "navbar-scrolled",
-            window.scrollY > 40
-        );
-    };
-
-    updateNavbar();
-
-    window.addEventListener("scroll", updateNavbar, {
-        passive: true
-    });
 });
+    
 /* =========================
    MOBILE MENU
 ========================= */
@@ -85,11 +69,37 @@ document.addEventListener("DOMContentLoaded", () => {
                     bootstrap.Collapse.getOrCreateInstance(mobileMenu);
 
                 collapse.hide();
-
             }
 
         });
 
+    });
+
+});
+/* =========================
+   NAVBAR SCROLL
+========================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const navbar = document.querySelector(".premium-navbar");
+
+    if (!navbar) return;
+
+    const updateNavbar = () => {
+
+        if (window.scrollY > 50) {
+            navbar.classList.add("navbar-scrolled");
+        } else {
+            navbar.classList.remove("navbar-scrolled");
+        }
+
+    };
+
+    updateNavbar();
+
+    window.addEventListener("scroll", updateNavbar, {
+        passive: true
     });
 
 });

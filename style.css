@@ -1846,15 +1846,6 @@ padding:8px 0;
         box-shadow 0.3s ease;
 }
 
-.premium-navbar.navbar-scrolled {
-    min-height: 75px;
-    padding: 5px 0;
-    box-shadow: 0 8px 28px rgba(8, 45, 80, 0.14);
-}
-
-.premium-navbar.navbar-scrolled .navbar-logo {
-    width: 130px;
-}
 
 /* Desplazamiento suave entre secciones */
 
@@ -2121,5 +2112,173 @@ section {
         width: 100%;
         max-width: none;
         margin-left: 0;
+    }
+}
+/* =========================
+   FAQ SECTION
+========================= */
+
+.faq-section {
+    padding: 110px 0;
+    background: #f7f9fc;
+}
+/* =========================
+   PREMIUM FAQ
+========================= */
+
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 16px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid rgba(8, 45, 80, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 10px 28px rgba(8, 45, 80, 0.06);
+}
+
+.faq-item summary {
+    position: relative;
+    padding: 22px 65px 22px 24px;
+    color: #082d50;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+    transition: 0.3s ease;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    background: #f47b20;
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.faq-item[open] summary {
+    color: #ffffff;
+    background: #082d50;
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+}
+
+.faq-answer {
+    padding: 22px 24px;
+    color: #667085;
+    line-height: 1.7;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+@media (max-width: 576px) {
+
+    .faq-item summary {
+        padding: 18px 58px 18px 18px;
+    }
+
+    .faq-item summary::after {
+        right: 16px;
+    }
+
+    .faq-answer {
+        padding: 18px;
+    }
+}
+/* =========================
+   FINAL NAVBAR SCROLL FIX
+========================= */
+
+.premium-navbar {
+    transition:
+        min-height 0.3s ease,
+        padding 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.navbar-logo {
+    transition: width 0.3s ease;
+}
+
+/* Navbar normal */
+.premium-navbar {
+    min-height: 85px;
+    padding: 8px 0;
+}
+
+.navbar-logo {
+    width: 150px;
+}
+
+
+/* =========================
+   NAVBAR SCROLL - CLEAN
+========================= */
+
+.premium-navbar {
+    min-height: 105px;
+    padding: 12px 0;
+    transition:
+        min-height 0.3s ease,
+        padding 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.premium-navbar .navbar-logo {
+    width: 185px;
+    height: auto;
+    transition: width 0.3s ease;
+}
+
+/* Navbar reduced after scroll */
+.premium-navbar.navbar-scrolled {
+    min-height: 68px;
+    padding: 3px 0;
+    box-shadow: 0 8px 28px rgba(8, 45, 80, 0.14);
+}
+
+.premium-navbar.navbar-scrolled .navbar-logo {
+    width: 115px;
+}
+
+
+/* MOBILE */
+@media (max-width: 991px) {
+
+    .premium-navbar {
+        min-height: 78px;
+        padding: 6px 0;
+    }
+
+    .premium-navbar .navbar-logo {
+        width: 135px;
+    }
+
+    .premium-navbar.navbar-scrolled {
+        min-height: 60px;
+        padding: 2px 0;
+    }
+
+    .premium-navbar.navbar-scrolled .navbar-logo {
+        width: 100px;
     }
 }

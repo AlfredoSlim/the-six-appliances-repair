@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alfredoslim.github.io/the-six-appliances-repair/sitemap.xml
